@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLD TRADE | Protokol: Hayatta Kalma</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="audio/soundtrack.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="sales-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 class="glitch" data-text="SİSTEME ERİŞİM SAĞLANDI">SİSTEME ERİŞİM SAĞLANDI</h2>
+            
+            <div class="game-cover">
+                <img src="images/cover_art.png" alt="Cold Trade Cover">
+            </div>  
+            
+            <p class="price-tag">₺999.00</p>
+            <p class="platform-text">PLATFORM SEÇİNİZ:</p>
+            <div class="platforms">
+                <button class="platform-btn">STEAM</button>
+                <button class="platform-btn">PS5</button>
+                <button class="platform-btn">XBOX</button>
+            </div>
+            <button class="buy-confirm-btn">SATIN ALMAYI ONAYLA</button>
+        </div>
+    </div>
+
+    <div id="loader">
+        <div class="loader-content">
+            <p>SİSTEM BAŞLATILIYOR: ORGOREYN PROTOKOLÜ...</p>
+            <div class="bar-container"><div class="bar"></div></div>
+            <p class="blink">NÖRAL ARAYÜZE BAĞLANILIYOR...</p>
+        </div>
+    </div>
+
+    <nav class="glass-panel">
+        <div class="logo glitch" data-text="COLD TRADE">COLD TRADE</div>
+        <ul class="nav-links">
+            <li><a href="#briefing">İSTİHBARAT</a></li>
+            <li><a href="#arsenal">TEÇHİZAT</a></li>
+            <li><a href="#gallery">GALERİ</a></li>
+            <li><a href="#factions">SEÇİMLER</a></li>
+            <li class="nav-actions">
+                <a href="javascript:void(0)" class="btn-primary" onclick="openModal()">ÖN SİPARİŞ</a>
+                <button id="audio-btn" onclick="toggleAudio()">🔇</button>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="glitch-large" data-text="HAYATTA KALMANIN BEDELİ">HAYATTA KALMANIN BEDELİ</h1>
+            <p class="hero-desc">
+                Buzla kaplı <strong>Gethen</strong> gezegeninde, vicdanın ve hayatta kalma içgüdün arasında bir savaş.
+                Antony Lee olarak, ticaretin yıkıcı sonuçlarıyla yüzleş.
+            </p>
+            <div class="cta-group">
+                <a href="javascript:void(0)" class="btn-main" onclick="openModal()">GÖREVİ KABUL ET</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="briefing" class="section-dark">
+        <div class="container split-layout">
+            <div class="text-block" data-aos="fade-right">
+                <h2 class="section-title">GÖREV DOSYASI: <span class="highlight-blue">GETHEN</span></h2>
+                <p><strong>Gezegen Durumu:</strong> Sürekli Kış. -45°C.</p>
+                <p><strong>Lokasyon:</strong> Feodal Karhide Krallığı ve Bürokratik Orgoreyn Eyaleti.</p>
+                <p>
+                    Devasa bir Mega-Şirket tarafından gönderilen bir çalışansın. Görevin, yerli halkın biyolojik döngüsünü bozan
+                    <strong>"Kepium"</strong> maddesinin ticaretini sağlamak. Ancak gördüğün ihanet ve sosyal çöküş, seni bir seçim yapmaya zorlayacak.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-num">-45°C</span>
+                        <span class="stat-label">ORTALAMA SICAKLIK</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">KEPIUM</span>
+                        <span class="stat-label">BİYOLOJİK TEHLİKE</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="visual-block product-showcase" data-aos="fade-left">
+                <div class="purple-aura"></div>
+                
+                <div class="product-container">
+                    <img src="images/kepium(transparan).png" alt="Kepium Vial" class="kepium-transparent-img">
+                </div>
+
+                <div class="product-ui">
+                    <div class="ui-header">
+                        <span class="safe-icon">✓</span>
+                        <span>SEVKİYAT ONAYLANDI</span>
+                    </div>
+                    <div class="ui-grid">
+                        <div class="ui-row">
+                            <span class="label">ÜRÜN:</span> 
+                            <span class="value">KEPIUM V.1</span>
+                        </div>
+                        <div class="ui-row">
+                            <span class="label">KATEGORI:</span> 
+                            <span class="value">DÖNGÜ DÜZENLEYİCİ</span>
+                        </div>
+                        <div class="ui-row">
+                            <span class="label">MENSEI:</span> 
+                            <span class="value">TERRA LABS™</span>
+                        </div>
+                        <div class="ui-row">
+                            <span class="label">DURUM:</span> 
+                            <span class="value safe-text">STABIL / GÜVENLI</span>
+                        </div>
+                    </div>
+                    <div class="corp-slogan">"GETHEN İÇİN DAHA İYİ BİR GELECEK"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="arsenal" class="section-gray">
+        <h2 class="center-title">TAKTİKSEL VARLIKLAR</h2>
+        
+        <div class="arsenal-grid">
+            
+            <div class="arsenal-card">
+                <div class="card-bg">
+                    <img src="images/arbiter_silahi.png" alt="Arbiter">
+                </div>
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3>ARBITER</h3>
+                    <div class="card-line"></div>
+                    <p>Kaotik çatışmalar ve sessiz suikastler için anında dönüşebilen modüler silah sistemi.</p>
+                    <div class="tech-tag">SALDIRI / KESKİN NİŞANCI</div>
+                </div>
+            </div>
+
+            <div class="arsenal-card">
+                <div class="card-bg">
+                    <img src="images/kamuflaj_yelek.png" alt="Cloak">
+                </div>
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3>OPTİK KAMUFLAJ</h3>
+                    <div class="card-line"></div>
+                    <p>Işığı bükerek görünmezlik sağlar. Orgoreyn tesislerine sızmak için hayati önem taşır.</p>
+                    <div class="tech-tag">GÖRÜNMEZLİK: AKTİF</div>
+                </div>
+            </div>
+
+            <div class="arsenal-card">
+                <div class="card-bg">
+                    <img src="images/nöral_önleyici.png" alt="Neural Tech">
+                </div>
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <h3>NÖRAL ÖNLEYİCİ</h3>
+                    <div class="card-line"></div>
+                    <p>Yerlilerin zihinlerine sızarak yalanları tespit et veya düşman hamlelerini önceden gör.</p>
+                    <div class="tech-tag">BAĞLANTI: ONLINE</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gallery" class="hb-gallery-section">
+        <div class="hb-header">
+            <h2 class="hb-title">GALERİ</h2>
+            <div class="hb-filters">
+                <button class="hb-btn active" onclick="filterGallery('all', this)">TÜMÜ</button>
+                <button class="hb-btn" onclick="filterGallery('concept', this)">KONSEPT (5)</button>
+                <button class="hb-btn" onclick="filterGallery('ingame', this)">OYUN İÇİ (11)</button>
+            </div>
+        </div>
+
+        <div class="hb-grid">
+            <div class="hb-item concept wide"><img src="images/konsept/1.png" alt="Konsept"></div>
+            <div class="hb-item concept"><img src="images/konsept/2.png" alt="Konsept"></div>
+            <div class="hb-item concept"><img src="images/konsept/3.png" alt="Konsept"></div>
+            <div class="hb-item concept"><img src="images/konsept/4.png" alt="Konsept"></div>
+            <div class="hb-item concept wide"><img src="images/konsept/5.png" alt="Konsept"></div>
+
+            <div class="hb-item ingame"><img src="images/oyuniçi/1.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame wide"><img src="images/oyuniçi/2.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame"><img src="images/oyuniçi/3.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame"><img src="images/oyuniçi/4.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame wide"><img src="images/oyuniçi/5.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame"><img src="images/oyuniçi/6.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame"><img src="images/oyuniçi/7.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame"><img src="images/oyuniçi/8.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame wide"><img src="images/oyuniçi/9.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame"><img src="images/oyuniçi/10.png" alt="Oyun İçi"></div>
+            <div class="hb-item ingame"><img src="images/oyuniçi/11.png" alt="Oyun İçi"></div>
+        </div>
+    </section>
+
+    <section id="factions" class="choices-section">
+        <div class="choice-overlay">
+            <h2>KİME GÜVENECEKSİN?</h2>
+            <p>Seçimlerin hikayeyi ve evreni değiştirir.</p>
+        </div>
+        <div class="split left-split">
+            <div class="split-content">
+                <h3>ŞİRKET (THE COMPANY)</h3>
+                <p>Sadakat, terfi ve eve dönüş bileti.</p>
+                <a href="javascript:void(0)" class="btn-corp" onclick="openModal()">İTAAT ET</a>
+            </div>
+        </div>
+        <div class="split right-split">
+            <div class="split-content">
+                <h3>DİRENİŞ (THE RESISTANCE)</h3>
+                <p>Vicdanın sesi. Şirkete ihanet et.</p>
+                <a href="javascript:void(0)" class="btn-rebel" onclick="openModal()">İSYANA KATIL</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>COLD TRADE</h4>
+                <p>Hikaye Odaklı FPS-RPG</p>
+            </div>
+            <div class="footer-col">
+                <h4>PLATFORMLAR</h4>
+                <p>PC | PS5 | Xbox Series X/S</p>
+            </div>
+            <div class="footer-col">
+                <h4>GELİŞTİRİCİ EKİP</h4>
+                <p>Muhammed Emin Çimen</p>
+                <p>İbrahim Gümüşdal</p>
+                <p>Muhammed Yusuf Anık</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 COLD TRADE GAME. TÜM HAKLARI SAKLIDIR.
+        </div>
+    </footer>
+
+    <script>
+        // LOADER
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => { loader.style.display = 'none'; }, 500); 
+            }, 2500);
+        });
+
+        // GALERİ FİLTRELEME
+        function filterGallery(category, btn) {
+            const items = document.querySelectorAll('.hb-item');
+            document.querySelectorAll('.hb-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.remove('hide-hb');
+                    item.classList.add('show-hb');
+                } else {
+                    item.classList.remove('show-hb');
+                    item.classList.add('hide-hb');
+                }
+            });
+        }
+
+        // MÜZİK KONTROL
+        const audio = document.getElementById("bg-music");
+        const audioBtn = document.getElementById("audio-btn");
+        audio.volume = 0.3;
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play().catch(e => console.log("Oynatma hatası:", e));
+                audioBtn.innerHTML = "🔊";
+                audioBtn.style.color = "#00f2ff";
+            } else {
+                audio.pause();
+                audioBtn.innerHTML = "🔇";
+                audioBtn.style.color = "#fff";
+            }
+        }
+
+        // MODAL KONTROL
+        const modal = document.getElementById("sales-modal");
+        function openModal() {
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModal() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) closeModal();
+        }
+
+        // SCROLL ANİMASYONU
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.text-block, .visual-block').forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 1s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
